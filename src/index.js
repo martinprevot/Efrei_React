@@ -7,6 +7,7 @@ import Login from './login/Login';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './Home';
 import Note from "./note/Note.jsx";
+import Plannings from "./planning/Plannings.jsx";
 
 let connectedUser = null;
 
@@ -22,7 +23,12 @@ const router = createBrowserRouter([
   {
     path: "/notes",
     element: <Note />,
-  }
+  },
+  {
+    path: "/plannings",
+    element: <Plannings />,
+
+},
 ]);
 
 
