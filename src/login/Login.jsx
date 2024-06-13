@@ -13,7 +13,6 @@ const Login = () => {
                 userMatching = i;
                 if(users[userMatching].password == password){
                     console.log("ok");
-                    connected
                     navigate('/home');
                 }
                 else{
