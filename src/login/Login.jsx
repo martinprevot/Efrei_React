@@ -11,9 +11,10 @@ const Login = () => {
         for(let i = 0; i<users.length; i++){
             if(users[i].username == studentNumber){
                 userMatching = i;
+                let user = users[userMatching];
                 if(users[userMatching].password == password){
                     console.log("ok");
-                    navigate('/home');
+                    navigate('/home', { state: { user } });
                 }
                 else{
                     console.log("nope");
