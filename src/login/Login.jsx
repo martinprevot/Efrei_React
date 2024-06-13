@@ -1,7 +1,9 @@
 import { useState } from "react";
 import users from "./users";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+    const navigate = useNavigate();
     const [studentNumber, setStudentNumber] = useState('');
     const [password, setPassword] = useState('');
     const submitEvent = () =>{
@@ -11,6 +13,8 @@ const Login = () => {
                 userMatching = i;
                 if(users[userMatching].password == password){
                     console.log("ok");
+                    connected
+                    navigate('/home');
                 }
                 else{
                     console.log("nope");
